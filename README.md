@@ -25,6 +25,8 @@
 docker-compose up -d
 ```
 
+![Captura de pantalla 2024-11-01 184156](https://github.com/user-attachments/assets/4c6c72bf-3dc3-4875-b9bd-c941ddb855be)
+
 2. Ver los logs (incluye la contraseña de admin):
 ```bash
 docker-compose logs airflow
