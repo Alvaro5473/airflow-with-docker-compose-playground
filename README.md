@@ -25,19 +25,23 @@
 docker-compose up -d
 ```
 
+![Captura desde 2024-11-06 09-26-03](https://github.com/user-attachments/assets/243618ea-2b0e-4e7b-91d7-5c39cbcb5bf6)
 
 2. Ver los logs (incluye la contraseña de admin):
 ```bash
-docker-compose logs airflow
+docker-compose logs airflow | grep admin
 ```
 
-![How To](assets/snapshot_pwd_in_docker-compose_output.png)
-
+![Captura desde 2024-11-06 09-30-40](https://github.com/user-attachments/assets/46510438-9646-41ac-9787-32ea507ce404)
 
 3. Acceder a la interfaz web:
 - URL: http://localhost:8001
 - Usuario: admin
 - Contraseña: buscar en los logs la línea que contiene "admin:password"
+
+![Captura desde 2024-11-06 09-31-38](https://github.com/user-attachments/assets/539191dd-f64c-423d-9866-3ec5e14d2509)
+
+![Captura desde 2024-11-06 09-32-11](https://github.com/user-attachments/assets/42319990-bfae-4499-8f6e-a7d9589baeb9)
 
 ## Verificar resultados
 
@@ -45,6 +49,8 @@ docker-compose logs airflow
 ```bash
 cat outputs/report.txt
 ```
+
+![Captura desde 2024-11-06 09-49-26](https://github.com/user-attachments/assets/20440fc0-dd45-4ac6-b8af-1f18f5c4c423)
 
 2. O acceder directamente al contenedor:
 ```bash
@@ -57,6 +63,8 @@ cat /tmp/report.txt
 ```bash
 docker-compose down
 ```
+
+![Captura desde 2024-11-06 09-50-05](https://github.com/user-attachments/assets/ee73d0ec-7d2b-4e6f-b087-574beb4f35fb)
 
 ## Comandos útiles
 
